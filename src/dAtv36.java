@@ -14,11 +14,19 @@ public class dAtv36 {
         System.out.print("Termina em: ");
         termina = ler.nextInt();
 
-        // Tabuada
-        while (comeca <= termina){
-            int resultado = number * comeca;
-            System.out.println(number+ " X " + comeca + " = " + resultado);
-            comeca++;
+        if (comeca < termina) {
+            while (termina >= comeca) {
+                System.out.println("O numero que começa é maior que termina, mas fiz o programa como solicitado");
+                int resultado = number * termina;
+                System.out.println(number + " X " + termina + " = " + resultado);
+                termina--;
+            }
+        } else {
+            while (comeca <= termina) {
+                int resultado = number * comeca;
+                System.out.println(number + " X " + comeca + " = " + resultado);
+                comeca++;
+            }
         }
     }
 }
